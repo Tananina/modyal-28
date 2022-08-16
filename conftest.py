@@ -59,7 +59,7 @@ def web_browser(request, selenium):
 
 
 def get_test_case_docstring(item):
-    """ Данная функция получает строку документа из тестового примера и форматирует ее,
+    """ Эта функция получает строку документа из тестового примера и форматирует ее
         что бы показывать эту строку документа вместо имени тестового примера в отчетах.
     """
 
@@ -85,7 +85,8 @@ def get_test_case_docstring(item):
 
 
 def pytest_itemcollected(item):
-    """ Данная функция изменяет имена тестовых случаев "on the fly" во время выполнения тест-кейсов.
+    """ This function modifies names of test cases "on the fly"
+        during the execution of test cases.
     """
 
     if item._obj.__doc__:
@@ -93,9 +94,9 @@ def pytest_itemcollected(item):
 
 
 def pytest_collection_finish(session):
-    """ Данная функция изменяла имена тестовых случаев "on the fly".
-        когда мы используем параметр --collect-only для pytest
-        (чтобы получить полный список всех существующих тестов).
+    """ This function modified names of test cases "on the fly"
+        when we are using --collect-only parameter for pytest
+        (to get the full list of all existing test cases).
     """
 
     if session.config.option.collectonly is True:
@@ -107,4 +108,4 @@ def pytest_collection_finish(session):
                 full_name = get_test_case_docstring(item)
                 print(full_name)
 
-        pytest.exit('Выполнено!')
+        pytest.exit('Done!')

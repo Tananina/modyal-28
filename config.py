@@ -2,7 +2,7 @@
 
 class TestData:
 
-    title_EMPTY_CART = 'Ваша корзина все еще пуста. Почему?'
+    title_EMPTY_CART = 'Ваша корзина пуста. Почему?'
     title_book_ADVENTURE_ERROR = 'Ghbrk.ctybz'
     title_book_BOOK_DEAD = 'Книга мертвых'
     title_book_ADVENTURE = 'Приключения'
@@ -16,5 +16,5 @@ class TestData:
     postponed_url = 'https://www.labirint.ru/cabinet/putorder/'
 
     text_auth_window = 'Полный доступ к Лабиринту'
-    text_phone_number = ''
+    text_phone_number = '8 800 600-95-25'
     text_video_block = 'Буктрейлеры и видеорецензии недели'
